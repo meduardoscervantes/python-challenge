@@ -10,7 +10,7 @@
 
 print("Financial Analysis")
 print("----------------------------")
-path = r'H:\2021 UTSA Bootcamp\HW_3_MESC\PyBank\Resources\budget_data.csv'
+path = r'resources\budget_data.csv'
 with open(path) as data:
     rawData = data.read()
     rows = rawData.split("\n")
@@ -27,3 +27,4 @@ with open(path) as data:
     for x in amount:
         mTotal += int(x)
     print(f"Total: ${mTotal}")
+    data.close()
