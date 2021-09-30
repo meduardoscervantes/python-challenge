@@ -42,7 +42,7 @@ with open(path) as data:
     print("-------------------------")
     print("Winner: Khan")
     print("-------------------------")
-    f = open("output_result.txt", "a")
+    f = open("PyPoll_Output.txt", "a")
     f.write("Election Results")
     f.write("\n-------------------------")
     f.write(f"\nTotal Votes: {len(voterId)}")
