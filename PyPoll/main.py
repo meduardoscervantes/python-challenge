@@ -3,7 +3,7 @@
 # and the winner of the election
 print("Election Results")
 print("-------------------------")
-path = r"H:\2021 UTSA Bootcamp\HW_3_MESC\PyPoll\Resources\election_data.csv"
+path = "resources/election_data.csv"
 with open(path) as data:
     rawData = data.read()
     voterId = []
