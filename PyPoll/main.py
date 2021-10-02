@@ -1,6 +1,7 @@
 # This program will look at the data provided in the .csv file and then display:
 # total number of votes, list of candidates who received votes, percentage of votes with number,
 # and the winner of the election
+import os
 print("Election Results")
 print("-------------------------")
 path = "resources/election_data.csv"
@@ -29,7 +30,9 @@ with open(path) as data:
                 county.append(temp[j])
             if j == 2:
                 candidate.append(temp[j])
-    # create the output.txt file and start outputting info for the console and separate file
+    # create directory and the output.txt file and start outputting info for the console and separate file
+    os.mkdir("analysis")
+    os.chdir("analysis")
     f = open("PyPoll_Output.txt", "a")
     print(f"Total Votes: {len(voterId)}")
     print("-------------------------")
