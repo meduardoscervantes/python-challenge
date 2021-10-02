@@ -21,6 +21,7 @@ with open(path) as data:
     amount = []
     dates = []
     differences = []
+    header = rows[0].split(',')
     # separate the data into its respective categories
     for i in range(1, len(rows) - 1):
         temp = rows[i]
