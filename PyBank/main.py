@@ -8,6 +8,8 @@
 # find the greatest decrease in profits and print : {when, amount}
 
 # print to the console
+import os
+
 print("Financial Analysis")
 print("----------------------------")
 # open the data stream
@@ -54,7 +56,9 @@ with open(path) as data:
     # print the output to the console
     print(f"Greatest Increase in Profits: {dates[posHigh + 1]} ({high})")
     print(f"Greatest Decrease in Profits: {dates[posLow + 1]} ({low})")
-    # create the output.txt file and write all the information
+    # create a new directory inside PyBank and the output.txt file and write all the information
+    os.mkdir("analysis")
+    os.chdir("analysis")
     f = open("PyBank_output.txt", "a")
     f.write("Financial Analysis")
     f.write(f"\n----------------------------")
